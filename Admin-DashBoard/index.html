@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <button class="sidebar-menu-button">
+        <span class="material-symbols-rounded">menu</span>
+    </button>
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <a href="" class="header-logo">
+                <img src="/Admin-DashBoard/Tiwari-corporation.png" alt="Tiwari-Corporation">
+            </a>
+            <button class="sidebar-toggle">
+                <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+        </header>
+        <nav class="sidebar-nav">
+            <ul class="nav-list primary-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="dashboard">
+                        <span class="material-symbols-rounded">dashboard</span>
+                        <span class="nav-label">Dashboard</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Dashboard</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">person</span>
+                        <span class="nav-label">Users Profile</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-title">User Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link" id="all-user">All Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Roles & Permission</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Activity Logs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">paid</span>
+                        <span class="nav-label">Transactions</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Transactions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Pending Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Refunds</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">shopping_bag</span>
+                        <span class="nav-label">Product</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link" id="product-lists-all">Product List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Product Status</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">analytics</span>
+                        <span class="nav-label">Analytics</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Sales Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">User Analytics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Traffic Reports</a>
+                        </li>
+                    </ul>
+                </li>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">article</span>
+                        <span class="nav-label">Blogs</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">All Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Comments</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown-container">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <span class="material-symbols-rounded">settings</span>
+                        <span class="nav-label">Settings</span>
+                        <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_right</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">General Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link dropdown-link">Payment Methods</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav-list secondary-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <span class="material-symbols-rounded">help</span>
+                        <span class="nav-label">Support</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Support</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link" id="sidebar-logout-btn">
+                        <span class="material-symbols-rounded">logout</span>
+                        <span class="nav-label">Log Out</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-title" href="">Log out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left-items">
+                <span id="homeBtn" class="material-symbols-rounded">home</span>
+            </div>
+            <div class="navbar-right-items">
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="material-symbols-rounded" id="theme-icon">dark_mode</span>
+                </button>
+                <div class="search-box">
+                    <span class="material-symbols-rounded">search</span>
+                    <input type="search" id="input-field" placeholder="Search">
+                </div>
+                <span class="material-symbols-rounded message-icon">message</span>
+                <span class="material-symbols-rounded notifications-icon">notifications</span>
+                <img class="user-profile-img" src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                    alt="Profile">
+            </div>
+        </div>
+    </nav>
+    <main class="main-body">
+        <div class="chart-container" style="display: none;">
+            <div class="chart-card">
+                <h3>Growth</h3>
+                <canvas id="userGrowthChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Revenue Breakdown</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Activity Overview</h3>
+                <canvas id="activityChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Top Products</h3>
+                <canvas id="productChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Devices</h3>
+                <canvas id="deviceChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Geo Distribution</h3>
+                <canvas id="geoChart"></canvas>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="user-stats">
+                <div>Total Users</div>
+                <div class="growth">
+                    <h2>
+                        <span class="material-symbols-rounded">person</span>
+                        <span id="total-users">87,300</span>
+                    </h2>
+                    <span class="growth-badge">
+                        <span class="total-user-percentage">+1.09%</span>
+                        <i>↗</i>
+                    </span>
+                </div>
+                <p class="growth-update">All users</p>
+            </div>
+            <div class="user-stats">
+                <div>Last Month Registration</div>
+                <div class="growth">
+                    <h2>
+                        <span class="material-symbols-rounded">person</span>
+                        <span id="last-month-registration">9,507</span>
+                    </h2>
+                    <span class="growth-badge neg-growth">
+                        <span class="last-month-registration-percentage">+3.29%</span>
+                        <i>↘</i>
+                    </span>
+                </div>
+                <p class="growth-update">This Month's Growth</p>
+            </div>
+            <div class="user-stats">
+                <div>Total Earnings</div>
+                <div class="growth">
+                    <h2>
+                        <span class="material-symbols-rounded">attach_money</span>
+                        <span id='total-earning'>7,47,300</span>
+                    </h2>
+                    <span class="growth-badge">
+                        <span class="percentage-text">+1.50%</span>
+                        <i>↗</i>
+                    </span>
+                </div>
+                <p class="growth-update">All Time Growth</p>
+            </div>
+            <div class="user-stats">
+                <div>My Earning</div>
+                <div class="growth">
+                    <h2>
+                        <span class="material-symbols-rounded">attach_money</span>
+                        <span id="my-earning">85,367</span>
+                    </h2>
+                    <span class="growth-badge">
+                        <span>+0.15% </span>
+                        <i>↗</i>
+                    </span>
+                </div>
+                <p class="growth-update">All time earning</p>
+            </div>
+        </div>
+        <div class="table-container">
+            <h1 class="table-heading">Clients List</h1>
+            <div class="table-filters">
+                <select id="status-filter">
+                    <option value="all">All Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Booking History</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Tonny Stark">
+                            <p>Tonny Stark</p>
+                        </td>
+                        <td>ironman@gmail.com</td>
+                        <td>189</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Thor Odinson">
+                            <p>Thor Odinson</p>
+                        </td>
+                        <td>thorodinson@gmail.com</td>
+                        <td>1500</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Rocket Raccoon">
+                            <p>Rocket Raccoon</p>
+                        </td>
+                        <td>rocket@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Carol Susan Jane Danvers">
+                            <p>Carol Susan Jane Danvers</p>
+                        </td>
+                        <td>captainmarvel@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Natalia Alianovna Romanova">
+                            <p>Natalia Alianovna Romanova</p>
+                        </td>
+                        <td>blackwidow@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="Thanos">
+                            <p>Thanos</p>
+                        </td>
+                        <td>thanos@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Steve Rogers">
+                            <p>Steve Rogers</p>
+                        </td>
+                        <td>captainamerica@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Shinobu Kocho">
+                            <p>Shinobu Kocho</p>
+                        </td>
+                        <td>shinobukocho@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Kamado Tanjiro">
+                            <p>Kamado Tanjiro</p>
+                        </td>
+                        <td>kamadotanjiro@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Yoriichi Tsugikuni">
+                            <p>Yoriichi Tsugikuni</p>
+                        </td>
+                        <td>yoriichitsugikuni@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp"
+                                alt="Inosuke Hashibira">
+                            <p>Inosuke Hashibira</p>
+                        </td>
+                        <td>inosukehashibira@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-active"><span>Active</span></td>
+                    </tr>
+                    <tr>
+                        <td class="table-profiles">
+                            <img class="table-profile-image"
+                                src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="Kyojuro Rengoku">
+                            <p>Kyojuro Rengoku</p>
+                        </td>
+                        <td>kyojurorengoku@gmail.com</td>
+                        <td>25</td>
+                        <td class="status-inactive"><span>Inactive</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <section class="message">
+            <h2 class="message-heading">
+                Messages
+            </h2>
+            <div class="message-content-container">
+                <div class="message-container">
+                    <div class="message-header">
+                        <img class="message-profile-image"
+                            src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>About Project</p>
+                    </div>
+                    <div class="message-content">
+                        This responsive admin dashboard shows real-time stats, includes sidebar toggling, dropdown
+                        menus, and offers a clean, interactive UI.
+                    </div>
+                </div>
+            </div>
+            <div class="message-content-container">
+                <div class="message-container">
+                    <div class="message-header">
+                        <img class="message-profile-image"
+                            src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>About Project</p>
+                    </div>
+                    <div class="message-content">
+                        Clean UI dashboard with stats, sidebar toggle, and dropdown menus.
+                    </div>
+                </div>
+            </div>
+            <div class="message-content-container">
+                <div class="message-container">
+                    <div class="message-header">
+                        <img class="message-profile-image"
+                            src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>About Project</p>
+                    </div>
+                    <div class="message-content">
+                        Responsive admin panel showing live stats with smooth user interaction.
+                    </div>
+                </div>
+            </div>
+            <div class="message-content-container">
+                <div class="message-container">
+                    <div class="message-header">
+                        <img class="message-profile-image"
+                            src="/Admin-DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>About Project</p>
+                    </div>
+                    <div class="message-content">
+                        This Admin Dashboard is a responsive and interactive interface built using HTML, CSS, and
+                        JavaScript. It displays dynamic user statistics with smooth animations, supports sidebar
+                        toggling, and includes dropdown menus for easy navigation. Ideal for managing data visually, it
+                        enhances user experience with real-time updates and clean UI design.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="notifications">
+            <h2 class="notifications-heading">
+                Notifications
+            </h2>
+            <div class="notifications-content-container">
+                <div class="notifications-container">
+                    <div class="notifications-header">
+                        <img class="notifications-profile-image"
+                            src="/DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>Payment Successful</p>
+                    </div>
+                    <div class="notifications-content">
+                        A payment of ₹5,000 has been received from John Doe via UPI.
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-content-container">
+                <div class="notifications-container">
+                    <div class="notifications-header">
+                        <img class="notifications-profile-image"
+                            src="/DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>Spam⚠️</p>
+                    </div>
+                    <div class="notifications-content">
+                        Credit $10000 in your accounnt
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-content-container">
+                <div class="notifications-container">
+                    <div class="notifications-header">
+                        <img class="notifications-profile-image"
+                            src="/DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>New Registration</p>
+                    </div>
+                    <div class="notifications-content">
+                        A new user has successfully signed up. Check the user list for details.
+                    </div>
+                </div>
+            </div>
+            <div class="notifications-content-container">
+                <div class="notifications-container">
+                    <div class="notifications-header">
+                        <img class="notifications-profile-image"
+                            src="/DashBoard/share-your-demon-slayer-wallpapers-v0-ztosms9xtgse1.webp" alt="">
+                        <p>Storage Limit Warning</p>
+                    </div>
+                    <div class="notifications-content">
+                        Your server storage has reached 90% of its capacity. Consider cleaning up unused files.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about-container">
+                <h2>Username ?</h2>
+                <button id="my-profile-btn">My Profile</button>
+                <button id="logout-btn">Log out</button>
+            </div>
+        </section>
+        <section class="my-profile-container" style="display: none;">
+            <div class="profile-box">
+                <div class="profile-header">
+                    <img src="https://i.pravatar.cc/80?img=12" alt="Profile Image" class="avatar" />
+                    <div class="name-actions">
+                        <h2>
+                            <span class="material-symbols-rounded">person</span>
+                            <span id="profile-username">
+                                Shubham Tiwari
+                            </span>
+                        </h2>
+                        <div class="actions">
+                            <button id="edit-profile-name" class="action-btn">Edit</button>
+                            <button id="profile-logout" class="action-btn logout">Logout</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="role"><span class="material-symbols-rounded">badge</span> Role: <span>Admin</span> | <span
+                        class="material-symbols-rounded">login</span> Last Login: <span id="login-time-update">27 June
+                        2025</span></p>
+                <hr />
+
+                <div class="info-section">
+                    <p><span class="material-symbols-rounded">email</span> Email: <span>shubham@gmail.com</span></p>
+                    <p><span class="material-symbols-rounded">phone</span> Phone: <span>+91-9876543210</span></p>
+                    <p><span class="material-symbols-rounded">calendar_today</span> Joined: <span>Jan 2024</span></p>
+                    <p><span class="material-symbols-rounded">person</span> Username: <span>shubh_01</span></p>
+                </div>
+                <hr />
+
+                <div class="stats-section">
+                    <p><span class="material-symbols-rounded">monetization_on</span> Earnings: <span>$ 86,119</span> |
+                        <span class="material-symbols-rounded">trending_up</span> Growth: <span>+11.27%</span>
+                    </p>
+                    <p><span class="material-symbols-rounded">bar_chart</span> Bookings: <span>187009</span> | <span
+                            class="material-symbols-rounded">check_circle</span> Status: <span>Active</span></p>
+                </div>
+                <hr />
+
+                <div class="settings">
+                    <span class="material-symbols-rounded">settings</span> <strong>Settings:</strong>
+                    <a href="#" class="setting-link">Change Password</a>
+                    <a href="#" class="setting-link">Privacy & Security</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-page" style="display: none;">
+            <h1>Tiwari Corporation <span class="auto-type"></span></h1>
+        </section>
+    </main>
+    <main class="login-main-container" style="display: none;">
+        <section class="login-container">
+            <div class="login-header">
+                <img src="/Admin-DashBoard/Tiwari-corporation.png" alt="Company Logo" class="login-logo">
+                <h1>Admin Dashboard</h1>
+                <p>Sign in to access your control panel</p>
+            </div>
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="username">
+                        <span class="material-symbols-rounded">person</span>
+                        Username
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">
+                        <span class="material-symbols-rounded">lock</span>
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <span class="material-symbols-rounded toggle-password">visibility_off</span>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    <span class="material-symbols-rounded">login</span>
+                    login
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#">Contact administrator</a></p>
+                <p class="copyright">© 2025 Injoria Technologies. All rights reserved.</p>
+            </div>
+            </div>
+        </section>
+    </main>
+    <main>
+        <div class="modal" id="logoutModal" style="display: none;">
+            <div class="modal-content">
+                <h3>Confirm Logout</h3>
+                <p>Are you sure you want to log out?</p>
+                <div class="modal-actions">
+                    <button class="modal-btn cancel">Cancel</button>
+                    <button class="modal-btn confirm">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="company-product" style="display: none;">
+        <h1>Tiwari Corporation – Product Catalog</h1>
+
+        <div class="category-list">
+            <span class="category">All</span>
+            <span class="category">Business Tools</span>
+            <span class="category">Cloud & Storage</span>
+            <span class="category">Communication</span>
+            <span class="category">APIs</span>
+            <span class="category">Security</span>
+        </div>
+
+        <div class="product-list">
+            <div class="product-card">
+                <h2>Tiwari CRM</h2>
+                <p><strong>Category:</strong> Business Tool</p>
+                <p>Client management, lead tracking, and email automation.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>Tiwari CloudVault</h2>
+                <p><strong>Category:</strong> Cloud & Storage</p>
+                <p>Secure cloud file storage with encryption & sharing.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>Tiwari Mail</h2>
+                <p><strong>Category:</strong> API Service</p>
+                <p>Transactional and marketing email delivery platform.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>Tiwari Chat</h2>
+                <p><strong>Category:</strong> Communication</p>
+                <p>Live chat and AI chatbot for websites.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>Tiwari Vault Pro</h2>
+                <p><strong>Category:</strong> Security</p>
+                <p>Password manager with secure sharing for teams.</p>
+            </div>
+
+            <div class="product-card">
+                <h2>Tiwari Pay</h2>
+                <p><strong>Category:</strong> API</p>
+                <p>UPI, card, and net banking payment integration API.</p>
+            </div>
+            <div class="product-card">
+                <h2>Tiwari AI</h2>
+                <p><strong>Category:</strong> AI</p>
+                <p>Future AI of Tiwari Corporation</p>
+            </div>
+            <div class="product-card">
+                <h2>Tiwari Industries</h2>
+                <p><strong>Category:</strong> Industries</p>
+                <p>Industries of Tiwari Corporation</p>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
