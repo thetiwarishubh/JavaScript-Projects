@@ -936,9 +936,10 @@ tr:hover {
 }
 
 .login-logo {
-    width: 80px;
+    width: 100px;
     height: auto;
     margin-bottom: 12px;
+    border-radius: 20px;
 }
 
 .login-header h1 {
