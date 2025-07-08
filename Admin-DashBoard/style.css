@@ -50,11 +50,11 @@ body {
 }
 
 .header-logo img {
-  height: 40px;
-  width: 100px;
+  height: 80px;
+  width: 120px;
   display: block;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: 0.3s ease;
 }
 
