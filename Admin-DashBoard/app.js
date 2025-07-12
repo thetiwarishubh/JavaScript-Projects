@@ -215,8 +215,13 @@ function initModals() {
   }
 
   function hideLogoutModal() {
-    modal.style.display = "none";
-  }
+  modal.style.display = "none";
+  document.querySelector(".main-body").classList.remove("blur");
+  document.querySelector(".navbar").classList.remove("blur");
+  document.querySelector(".sidebar").classList.remove("blur");
+  document.body.style.overflow = "auto";
+}
+
 
   // Add event listeners to all logout buttons
   logoutButtons.forEach((btn) => {
