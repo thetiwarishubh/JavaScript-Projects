@@ -1,4 +1,3 @@
-// Main optimized app.js
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize all components
   initTheme();
@@ -740,4 +739,7 @@ productBtn.addEventListener('click', (e)=> {
     sidebar.classList.add('collapsed');
     document.querySelector('.main-body').style.display = 'none';
     companyProduct.style.display = 'block';
-})
+});
+
+const supportBtn = document.querySelector('.support-btn');
+
