@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initTicketFilter();
 });
 
-// Support Form Management
 function initSupportForm() {
   const supportForm = document.getElementById("supportForm");
 
@@ -17,7 +16,6 @@ function initSupportForm() {
       const issue = document.getElementById("support-issue").value.trim();
 
       if (name && email && issue) {
-        // Simulate ticket submission
         const ticketId = `#${Math.floor(10000 + Math.random() * 90000)}`;
         const date = new Date().toLocaleDateString("en-GB", {
           day: "2-digit",
@@ -45,7 +43,6 @@ function initSupportForm() {
   }
 }
 
-// Ticket Status Filter Management
 function initTicketFilter() {
   const searchInput = document.getElementById("input-field");
 

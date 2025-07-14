@@ -740,6 +740,3 @@ productBtn.addEventListener('click', (e)=> {
     document.querySelector('.main-body').style.display = 'none';
     companyProduct.style.display = 'block';
 });
-
-const supportBtn = document.querySelector('.support-btn');
-
