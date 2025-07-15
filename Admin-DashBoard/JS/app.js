@@ -713,12 +713,9 @@ function initPanelToggles() {
     chartPanel.style.display = "grid";
     homePanel.style.display = "none";
   });
-}
-
-// Initialize panel toggles after DOM is loaded
+};
 document.addEventListener("DOMContentLoaded", initPanelToggles);
 
-// Last Login Date
 document.getElementById("login-time-update").textContent =
   new Date().toDateString();
 
