@@ -302,6 +302,9 @@ body.dark-mode {
   .chart-card h3 {
     color: #e0e0e0;
   }
+  .search-box input {
+    color: #ffffff;
+  }
 }
 
 
