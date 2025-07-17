@@ -291,14 +291,12 @@ body {
 }
 
 /* Dark Mode  */
-
 body.dark-mode {
   --bg-color: linear-gradient(#1a1a2e, #2a2a4e);
   --card-bg: #2a2a4e;
   --text-color: #e0e0e0;
   --shadow: rgba(255, 255, 255, 0.1);
   
-  /* Ensure charts have light text in dark mode */
   .chart-card h3 {
     color: #e0e0e0;
   }
@@ -306,7 +304,6 @@ body.dark-mode {
     color: #ffffff;
   }
 }
-
 
 .theme-toggle {
   height: 41px;
