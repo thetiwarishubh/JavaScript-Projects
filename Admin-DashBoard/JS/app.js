@@ -717,7 +717,7 @@ function initPanelToggles() {
 document.addEventListener("DOMContentLoaded", initPanelToggles);
 
 document.getElementById("login-time-update").textContent =
-  new Date().toDateString();
+  `${new Date().toDateString()} ${new Date().toLocaleDateString()}`;
 
 const allUserBtn = document.getElementById("all-user");
 
