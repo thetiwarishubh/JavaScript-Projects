@@ -716,8 +716,32 @@ function initPanelToggles() {
 };
 document.addEventListener("DOMContentLoaded", initPanelToggles);
 
-document.getElementById("login-time-update").textContent =
-  `${new Date().toDateString()} ${new Date().toLocaleDateString()}`;
+// document.getElementById("login-time-update").textContent =
+//   new Date().toDateString();
+
+//  Update Last Login time
+const loginTimeCheck = function() {
+  const loginTimeUpdate = document.getElementById('login-time-update');
+  const currentTime = new Date();
+
+  const addZero = num => (num < 10 ? `0${num}` : num);
+
+  let hours = currentTime.getHours();
+  const minutes = addZero(currentTime.getMinutes());
+  const seconds = addZero(currentTime.getSeconds());
+  const milliseconds = currentTime.getMilliseconds();
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  hours = addZero(hours);
+
+  loginTimeUpdate.textContent = `${currentTime.toDateString()} ${hours} : ${minutes} : ${seconds} ${ampm} : ${milliseconds}`;
+}
+
+setInterval(() => {
+  loginTimeCheck();
+}, 1);
 
 const allUserBtn = document.getElementById("all-user");
 
