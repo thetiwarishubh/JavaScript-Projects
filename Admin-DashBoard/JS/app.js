@@ -761,3 +761,8 @@ productBtn.addEventListener('click', (e)=> {
     document.querySelector('.main-body').style.display = 'none';
     companyProduct.style.display = 'block';
 });
+
+const passwordChangeBtn = document.querySelector('.change-password-btn');
+passwordChangeBtn.addEventListener('click', ()=> {
+  window.location.href = 'change-password.html'
+})
