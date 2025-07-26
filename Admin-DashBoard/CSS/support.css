@@ -491,11 +491,12 @@ body.dark-mode {
   margin-bottom: 15px;
 }
 
-.faq-item h3 {
+.faq-item a {
   font-size: 14px;
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .faq-item p {
