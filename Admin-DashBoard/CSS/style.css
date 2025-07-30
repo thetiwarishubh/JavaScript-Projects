@@ -845,6 +845,10 @@ tr:hover {
   flex-wrap: wrap;
 }
 
+#login-time-update {
+  color: #ff0000;
+}
+
 .info-section p,
 .stats-section p {
   margin: 6px 0;
