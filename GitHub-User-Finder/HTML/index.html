@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100 text-gray-800">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub User Search</title>
+    <link rel="stylesheet" href="/GitHub-User-Finder/src/output.css" />
+  </head>
+  <body class="bg-[#030712] min-h-screen flex items-center justify-center">
+    <div
+      class="bg-[#1C2839] w-full max-w-xl px-6 py-10 text-[#fff] shadow-xl rounded-lg"
+    >
+      <!-- Title -->
+      <h1 class="text-3xl font-semibold text-center text-[#fff] mb-6">
+        GitHub User Search
+      </h1>
+
+      <!-- Search Form -->
+      <form action="/search" method="GET" class="flex items-center gap-3">
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter GitHub username"
+          required
+          class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+        <button
+          type="submit"
+          class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors cursor-pointer"
+        >
+          Search
+        </button>
+      </form>
+
+      <!-- Result Placeholder -->
+      <div class="mt-10">
+        <!-- Example Card (to be replaced with dynamic content) -->
+        <div class="bg-[#1C2839] border border-gray-200 rounded-lg p-6 shadow-sm">
+          <div class="flex items-center space-x-5">
+            <img
+              src="https://avatars.githubusercontent.com/u/9919?v=4"
+              alt="User Avatar"
+              class="w-20 h-20 rounded-full border"
+            />
+            <div>
+              <h2 class="text-xl font-bold text-[#fff]">GitHub</h2>
+              <p class="text-sm text-[#fff]">
+                The official GitHub organization
+              </p>
+            </div>
+          </div>
+          <div class="mt-4 text-sm text-[#fff]">
+            <p><strong>Followers:</strong> 10000</p>
+            <p><strong>Repositories:</strong> 200</p>
+            <p><strong>Location:</strong> San Francisco, CA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/GitHub-User-Finder/JS/app.js"></script>
+  </body>
+</html>
