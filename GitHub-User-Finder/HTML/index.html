@@ -16,15 +16,15 @@
       </h1>
 
       <!-- Search Form -->
-      <form action="/search" method="GET" class="flex items-center gap-3">
-        <input
+      <form  class="flex items-center gap-3">
+        <input id="user-input"
           type="text"
           name="username"
           placeholder="Enter GitHub username"
           required
           class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
         />
-        <button
+        <button id="search-btn"
           type="submit"
           class="px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors cursor-pointer"
         >
@@ -33,26 +33,31 @@
       </form>
 
       <!-- Result Placeholder -->
-      <div class="mt-10">
-        <!-- Example Card (to be replaced with dynamic content) -->
-        <div class="bg-[#1C2839] border border-gray-200 rounded-lg p-6 shadow-sm">
-          <div class="flex items-center space-x-5">
-            <img
-              src="https://avatars.githubusercontent.com/u/9919?v=4"
-              alt="User Avatar"
-              class="w-20 h-20 rounded-full border"
-            />
-            <div>
-              <h2 class="text-xl font-bold text-[#fff]">GitHub</h2>
-              <p class="text-sm text-[#fff]">
-                The official GitHub organization
+      <div class="mt-10 animate-pulse">
+        <div
+          class="bg-[#1C2839] border border-gray-200 rounded-lg p-6 shadow-sm flex items-start space-x-6"
+        >
+          <!-- Left Side Image -->
+          <img id="user-image"
+            src="https://avatars.githubusercontent.com/u/9919?v=4"
+            alt="User Avatar"
+            class="w-24 h-24 rounded-full border border-white object-cover"
+          />
+
+          <!-- Right Side Content -->
+          <div class="text-[#fff] space-y-2">
+            <h2 id="user-username" class="text-2xl font-bold">GitHub</h2>
+            <p id="user-fullname" class="text-sm text-gray-300">
+              The official GitHub organization
+            </p>
+
+            <div class="text-sm space-y-1">
+              <p><span class="font-semibold">Followers:</span> <span id="followers-count"> 10000</span></p>
+              <p><span class="font-semibold">Repositories:</span> <span id="repo-count"> 200</span></p>
+              <p>
+                <span class="font-semibold">Location:</span> <span id="location"> Delhi, India</span>
               </p>
             </div>
-          </div>
-          <div class="mt-4 text-sm text-[#fff]">
-            <p><strong>Followers:</strong> 10000</p>
-            <p><strong>Repositories:</strong> 200</p>
-            <p><strong>Location:</strong> San Francisco, CA</p>
           </div>
         </div>
       </div>
