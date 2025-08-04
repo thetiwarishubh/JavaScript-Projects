@@ -9,6 +9,40 @@ const weatherIcon = document.getElementById("weather-icon");
 const airQuality = document.getElementById("air-quality");
 const currentDate = document.getElementById("current-date");
 
+const dateTime = function () {
+  const dates = new Date();
+  const dayIndex = dates.getDay();
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dayName = days[dayIndex];
+  const date = dates.getDate();
+  const monthIndex = dates.getMonth();
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const monthName = months[monthIndex];
+  const hour = dates.getHours() || 12;
+  const minute = dates.getMinutes().toString().padStart(2, "0");
+  const seconds = dates.getSeconds().toString().padStart(2, "0");
+  const miliSeconds = dates.getMilliseconds().toString().padStart(3, "0");
+  const ampm = dates.getHours() >= 12 ? "PM" : "AM";
+  currentDate.textContent = `${dayName}, ${date} ${monthName} [ ${hour} : ${minute} : ${seconds} : ${miliSeconds} ${ampm} IST]`;
+};
+setInterval(() => {
+  dateTime();
+}, 1);
+dateTime();
+
 const getWeatherDetails = function (location) {
   const url = fetch(
     `http://api.weatherapi.com/v1/current.json?key=7305e901b7e84368bfe184928250208&q=${location}&aqi=yes`
@@ -19,10 +53,10 @@ const getWeatherDetails = function (location) {
     },
   })
     .then((response) => {
-      if(!response.ok){
-        throw new Error (`City Image not Found ${response.status}`)
+      if (!response.ok) {
+        throw new Error(`City Image not Found ${response.status}`);
       }
-      return response.json()
+      return response.json();
     })
     .then((data) => {
       console.log(data);
