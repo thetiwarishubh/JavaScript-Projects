@@ -7,6 +7,7 @@ const windSpeed = document.getElementById("wind-speed");
 const weatherDescription = document.getElementById("weather-description");
 const weatherIcon = document.getElementById("weather-icon");
 const airQuality = document.getElementById("air-quality");
+const currentDate = document.getElementById("current-date");
 
 const getWeatherDetails = function (location) {
   const url = fetch(
