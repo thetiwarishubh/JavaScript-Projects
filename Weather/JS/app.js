@@ -34,9 +34,8 @@ const dateTime = function () {
   const hour = dates.getHours() || 12;
   const minute = dates.getMinutes().toString().padStart(2, "0");
   const seconds = dates.getSeconds().toString().padStart(2, "0");
-  const miliSeconds = dates.getMilliseconds().toString().padStart(3, "0");
   const ampm = dates.getHours() >= 12 ? "PM" : "AM";
-  currentDate.textContent = `${dayName}, ${date} ${monthName} [ ${hour} : ${minute} : ${seconds} : ${miliSeconds} ${ampm} IST]`;
+  currentDate.textContent = `${dayName}, ${date} ${monthName} [ ${hour} : ${minute} : ${seconds} ${ampm} IST]`;
 };
 setInterval(() => {
   dateTime();
