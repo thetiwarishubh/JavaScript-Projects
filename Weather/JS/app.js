@@ -9,7 +9,6 @@ const weatherIcon = document.getElementById("weather-icon");
 const airQuality = document.getElementById("air-quality");
 const currentDate = document.getElementById("current-date");
 
-// Function to map AQI index to descriptive label and color
 const getAqiDescription = (aqiIndex) => {
   const aqiLevels = {
     1: { label: "Good", color: "text-green-400" },
@@ -52,7 +51,7 @@ const dateTime = function () {
 };
 setInterval(() => {
   dateTime();
-}, 1000); // Changed to 1000ms (1 second) for smoother updates
+}, 1000);
 dateTime();
 
 const getWeatherDetails = function (location) {
