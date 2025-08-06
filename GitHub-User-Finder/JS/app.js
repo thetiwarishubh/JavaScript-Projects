@@ -18,6 +18,11 @@ searchbtn.addEventListener("click", (e) => {
         userFollowers.textContent = user.followers;
         userRepoCount.textContent = user.public_repos;
         userLocation.textContent = user.location;
+        document.body.style.backgroundImage = `url(${user.avatar_url})`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.transition = "background-image 0.1s ease-in-out";
       });
   };
   const inputUserValue = input.value.trim();
