@@ -102,7 +102,7 @@ const getWeatherDetails = function (location) {
       const aqiIndex = locationName.current.air_quality["us-epa-index"];
       const aqiInfo = getAqiDescription(aqiIndex);
       airQuality.textContent = aqiInfo.label;
-      airQuality.className = `font-bold text-lg ${aqiInfo.color}`; // Apply color class
+      airQuality.className = `font-bold text-base ${aqiInfo.color}`;
       console.log(locationName);
     })
     .catch((err) => {
