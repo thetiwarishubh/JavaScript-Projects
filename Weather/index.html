@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/Weather/src/output.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-900 to-blue-900 text-white flex items-center justify-center min-h-screen px-4"
+  >
+    <div
+      class="bg-gradient-to-br from-gray-900 to-blue-90 bg-opacity-20 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-lg transition-all duration-300 hover:scale-[1.02]"
+    >
+      <form
+        class="flex flex-wrap justify-between items-center gap-2 mb-6"
+        onsubmit="return false"
+      >
+        <div class="relative w-full flex-grow">
+          <input
+            id="city-input"
+            type="text"
+            placeholder="Enter a city name"
+            class="bg-gray-800 text-white p-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
+            aria-label="Search for a city"
+          />
+          <button
+            id="search-btn"
+            type="submit"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+
+      <!-- Weather Info -->
+      <div class="text-center">
+        <h2
+          id="city-name"
+          class="text-3xl font-bold text-white flex items-center justify-center"
+        >
+          <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+            />
+          </svg>
+          New Delhi
+        </h2>
+        <p class="text-sm text-gray-300" id="current-date">
+          Sat, 02 Aug [10:58 PM IST]
+        </p>
+
+        <div class="flex items-center justify-center my-6">
+          <svg id="weather-icon"
+            class="w-20 h-20 text-yellow-300"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M6.995 12c0-2.761 2.246-5.004 5.005-5.004S17.005 9.239 17.005 12s-2.246 5.004-5.005 5.004S6.995 14.761 6.995 12z"
+            />
+          </svg>
+          <span id="current-temp" class="text-5xl ml-4 text-white">29°C</span>
+        </div>
+
+        <p id="weather-description" class="text-xl text-white">Rain</p>
+
+        <div class="flex justify-between mt-6">
+          <div class="text-center">
+            <p class="text-sm">Humidity</p>
+            <p id="humidity" class="font-bold text-base">80%</p>
+          </div>
+          <div class="text-center">
+            <p class="text-sm">Wind Speed</p>
+            <p id="wind-speed" class="font-bold text-base">13 km/h</p>
+          </div>
+          <div class="text-center">
+            <p class="text-sm">Air Quality</p>
+            <p id="air-quality" class="font-bold text-base">300</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/Weather/JS/app.js"></script>
+  </body>
+</html>
