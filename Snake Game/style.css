@@ -91,6 +91,7 @@ section .infos {
 
 .block {
     border: 1px solid var(--border-primary-color);
+    border-radius: 50%;
 }
 
 .fill {

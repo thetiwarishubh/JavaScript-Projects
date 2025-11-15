@@ -44,7 +44,7 @@ for (let row = 0; row < rows; row++) {
     const block = document.createElement("div");
     block.classList.add("block");
     board.appendChild(block);
-    block.innerText = `${row}-${col}`;
+    // block.innerText = `${row}-${col}`;
     blocks[`${row}-${col}`] = block;
   }
 }
